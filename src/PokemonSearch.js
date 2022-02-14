@@ -2,16 +2,20 @@ import { useState } from 'react';
 
 export default function PokemonSearch() {
       // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
-  
+  const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('pikachu');
+
   async function handlePokemonSubmit(e) {
     e.preventDefault();
-      
+
         // set the loading state to true
+    setLoading(true);
         // use fetch to make a request to your netlify pokemon function. Be sure to pass the pokemon name as a query param in the URL
-  
+
         // put the jsonified data in state and set the loading state to false
   }
-      
+
   return (
     <section className='pokemon'>
       {/* make the fetch on submit */}
