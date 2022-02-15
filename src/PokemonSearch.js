@@ -19,7 +19,7 @@ export default function PokemonSearch() {
 
     // const response = await fetch(endPointURL);
     const json = await response.json();
-    setPokemons(json.results);
+    setPokemons(json.json.results);
         // put the jsonified data in state and set the loading state to false
   }
 
