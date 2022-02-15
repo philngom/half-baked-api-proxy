@@ -19,6 +19,7 @@ export default function PokemonSearch() {
 
     // const response = await fetch(endPointURL);
     const json = await response.json();
+    console.log(json);
     setPokemons(json.json.results);
         // put the jsonified data in state and set the loading state to false
   }
@@ -31,7 +32,7 @@ export default function PokemonSearch() {
       <form onSubmit={ handlePokemonSubmit }>
         <label>
             Pokemon Name:
-          <input value-={name} onChange={e => setName(e.target.value)}/>
+          <input value={name} onChange={e => setName(e.target.value)}/>
         </label>
         <button type="submit">Get pokemon</button>
       </form>
