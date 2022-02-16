@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   try {
     // grab the city, state, and country from the request's query parameters
     // here is an example from the netlify docs:
