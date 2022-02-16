@@ -72,3 +72,10 @@ label {
   display: block;
 }
 
+.business img {
+  width: 200px;
+}
+
+.loading-spinner {
+  width: 200px;
+}
