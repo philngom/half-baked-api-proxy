@@ -2,13 +2,12 @@ const fetch = require('node-fetch');
 
 require('dotenv').config();
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   try {
     // grab the pokemon's name from the request's query parameters
     // here is an example from the netlify docs:
     // https://functions.netlify.com/playground/#hello%2C-%7Bname%7D
     const name = event.queryStringParameters.pokemon;
-    console.log(name);
     // consult the pokedex docs
     const endPointURL = `https://pokedex-alchemy.herokuapp.com/api/pokedex?pokemon=${name}`;
     // https://pokedex-alchemy.herokuapp.com/
